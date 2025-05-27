@@ -1,0 +1,32 @@
+header
+{
+    background-color: black;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.header
+{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__title { font-size: 40px;}
+.header__nav
+{
+    display: flex;
+    gap: 30px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+.header__nav-links
+{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+.header__nav-links:hover
+{
+    color: #A0F239;
+}

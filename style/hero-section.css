@@ -1,0 +1,60 @@
+.hero-section 
+{
+    background-image: url(/img/Без\ имени-21\ 2.png);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    z-index: 1; 
+    bottom: 20px;
+}
+.hero-section::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Чёрный с прозрачностью 40% */
+    z-index: -1; /* Под контентом, но над фоном */
+}
+
+.hero-section-info 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    gap: 20px;
+}
+.hero-section-info__title
+{
+    font-size: 90px;
+    color: #A0F239;
+}
+.hero-section-info__text
+{
+    font-size: 40px;
+    color: white;
+}
+.hero-section-info__button
+{
+    padding: 5px 25px;
+    background-color: black;
+    color: #A0F239;
+    font-size: 48px;
+    border: 2px solid #A0F239;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.hero-section-info__button:hover
+{
+    background-color: #A0F239;
+    color: black;
+    border: black;
+}
