@@ -44,13 +44,14 @@
 }
 .hero-section-info__button
 {
-    padding: 5px 25px;
+    padding: 5px 34px;
     background-color: black;
     color: #A0F239;
     font-size: 48px;
     border: 2px solid #A0F239;
-    border-radius: 20px;
+    border-radius:35px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .hero-section-info__button:hover
 {
