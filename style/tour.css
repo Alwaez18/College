@@ -1,0 +1,127 @@
+/* Основные стили */
+.tours-section 
+{
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.tours-title 
+{
+    font-size: 48px;
+    color: #A0F239;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tours-table 
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #A0F239;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tours-row 
+{
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.tours-row:last-child {border-bottom: none;}
+
+.tours-header 
+{
+    background-color: #1a1a1a;
+    font-weight: bold;
+}
+
+.tours-cell 
+{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rating 
+{
+    display: flex;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.rating-item 
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #A0F239;
+}
+
+.rating-item.active {background-color: #A0F239;}
+.rating-text {color: #A0F239}
+
+.book-btn 
+{
+    background-color: transparent;
+    color: #A0F239;
+    border: 2px solid #A0F239;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.book-btn:hover 
+{
+    background-color: #A0F239;
+    color: black;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .tours-row{flex-wrap: wrap;}
+    
+    .tours-cell 
+    {
+        flex: 1 0 33%;
+        padding: 15px 10px;
+    }
+    
+    .tours-cell:nth-child(5),
+    .tours-cell:nth-child(6) {flex: 1 0 50%;}
+}
+
+@media (max-width: 768px) {
+    .tours-title {font-size: 36px;}
+    .tours-cell {flex: 1 0 50%;}
+    .tours-header .tours-cell {display: none; }
+    .tours-row 
+    {
+        position: relative;
+        padding-top: 40px;
+    }
+    
+    .tours-cell::before 
+    {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #A0F239;
+    }
+    
+    .tours-cell {justify-content: flex-end;}
+}
+
+@media (max-width: 480px) {
+    .tours-cell {flex: 1 0 100%;}
+    .book-btn{width: 100%;}
+}

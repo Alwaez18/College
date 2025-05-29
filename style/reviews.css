@@ -1,0 +1,114 @@
+.Reviews 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.Reviews-card-block 
+{
+    width: 352px;
+    height: 297px;
+    border: 2px solid #A0F239;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Reviews-card-block:hover {transform: translateY(-5px)}
+
+.Reviews-card-block-top 
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-name 
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Reviews-card-block-bottom 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Reviews-card-block__rating 
+{
+    width: 120px;
+    height: auto;
+}
+
+.Reviews-card-block__photo 
+{
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.review-text 
+{
+    line-height: 1.4;
+    margin: 0;
+}
+
+.Reviews-card 
+{
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.Reviews__title {
+    font-size: 48px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Reviews__line 
+{
+    margin: 30px auto;
+    display: block;
+}
+
+.card-flex 
+{
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Reviews-card-block__circle 
+{
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #A0F239;
+    flex-shrink: 0;
+}
+.Reviews-card-block__divider {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0;
+    display: block;
+}
+
+.Reviews-card-block-bottom 
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

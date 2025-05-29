@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style/hero-section.css">
     <link rel="stylesheet" href="style/main-header.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/reviews.css">
+    <link rel="stylesheet" href="style/tour.css">
+    <link rel="stylesheet" href="style/question.css">
 </head>
 <body>
     <header>
@@ -34,15 +37,15 @@
     </section>
 
     <main>
-        <div class="container">
-            <div class="main-header">
-                <h2 class="main-header__title">ПОПУЛЯРНОЕ</h2>
-                <nav class="main-header-nav">
-                    <img src="img/image.png" alt="" class="main-header-nav">
-                    <img src="img/image.png" alt="" class="main-header-nav">
-                </nav>
-            </div>
-            <div class="main">
+            <div class="container">
+               <div class="main-header">
+                   <h2 class="main-header__title">ПОПУЛЯРНОЕ</h2>
+                   <nav class="main-header-nav">
+                       <img src="img/image.png" alt="" class="main-header-nav">
+                       <img src="img/image.png" alt="" class="main-header-nav">
+                   </nav>
+               </div>
+        <div class="main">
             <article class="card">
                 <div class="card-block-1">
                     <img src="img/Rectangle.png" alt="" class="card-block-1__img">
@@ -124,7 +127,208 @@
             </article>
             </div>
         </div>
+
+            <section class="Reviews">
+                <div class="container">
+                    <h3 class="Reviews__title">ЧТО ГОВОРЯТ НАШИ КЛИЕНТЫ</h3>
+                    <img src="img/image.png" alt="Декоративная линия" class="Reviews__line">
+
+                    <div class="card-flex">
+                        <!-- Карточка 1 -->
+                        <article class="Reviews-card">
+                            <div class="Reviews-card-block">
+                                <div class="Reviews-card-block-top">
+                                    <div class="Reviews-card-block__circle"></div>
+                                    <span class="client-name">Имя Клиента</span>
+                                </div>
+                                <img src="img/image.png" alt="" class="Reviews-card-block__divider">
+                                <div class="Reviews-card-block-bottom">
+                                    <p class="review-text">Текст отзыва здесь. Отличный сервис!</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Карточка 2 -->
+                        <article class="Reviews-card">
+                            <div class="Reviews-card-block">
+                                <div class="Reviews-card-block-top">
+                                    <div class="Reviews-card-block__circle"></div>
+                                    <span class="client-name">Имя Клиента</span>
+                                </div>
+                                <img src="img/image.png" alt="" class="Reviews-card-block__divider">
+                                <div class="Reviews-card-block-bottom">
+                                    <p class="review-text">Текст отзыва здесь. Очень доволен!</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Карточка 3 -->
+                        <article class="Reviews-card">
+                            <div class="Reviews-card-block">
+                                <div class="Reviews-card-block-top">
+                                    <div class="Reviews-card-block__circle"></div>
+                                    <span class="client-name">Имя Клиента</span>
+                                </div>
+                                <img src="img/image.png" alt="" class="Reviews-card-block__divider">
+                                <div class="Reviews-card-block-bottom">
+                                    <p class="review-text">Текст отзыва здесь. Рекомендую!</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        <section class="tours-section">
+            <div class="container">
+                <h2 class="tours-title">БЛИЖАЙШИЕ ТУРЫ</h2>
+
+                <div class="tours-table">
+                    <!-- Заголовки таблицы -->
+                    <div class="tours-row tours-header">
+                        <div class="tours-cell">НАЗВАНИЕ</div>
+                        <div class="tours-cell">ЛОКАЦИЯ</div>
+                        <div class="tours-cell">ДАТА</div>
+                        <div class="tours-cell">МЕСТ</div>
+                        <div class="tours-cell">ЭКСТРЕМАЛЬНОСТЬ</div>
+                        <div class="tours-cell"></div> <!-- Для кнопки -->
+                    </div>
+
+                    <!-- Строки с турами -->
+                    <div class="tours-row">
+                        <div class="tours-cell">ГОРНЫЙ ШТУРМ</div>
+                        <div class="tours-cell">АЛТАЙ</div>
+                        <div class="tours-cell">15 ИЮНЯ 2025</div>
+                        <div class="tours-cell">7</div>
+                        <div class="tours-cell">
+                            <div class="rating">
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item"></div>
+                            </div>
+                            <span class="rating-text">5/6</span>
+                        </div>
+                        <div class="tours-cell">
+                            <button class="book-btn">ЗАБРОНИРОВАТЬ</button>
+                        </div>
+                    </div>
+
+                    <div class="tours-row">
+                        <div class="tours-cell">РАФТИНГ ЭКСТРИМ</div>
+                        <div class="tours-cell">КАРЕЛИЯ</div>
+                        <div class="tours-cell">28 ИЮНЯ 2025</div>
+                        <div class="tours-cell">4</div>
+                        <div class="tours-cell">
+                            <div class="rating">
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item"></div>
+                                <div class="rating-item"></div>
+                            </div>
+                            <span class="rating-text">4/6</span>
+                        </div>
+                        <div class="tours-cell">
+                            <button class="book-btn">ЗАБРОНИРОВАТЬ</button>
+                        </div>
+                    </div>
+                    <div class="tours-row">
+                        <div class="tours-cell">ГОРНЫЙ ШТУРМ</div>
+                        <div class="tours-cell">АЛТАЙ</div>
+                        <div class="tours-cell">15 ИЮНЯ 2025</div>
+                        <div class="tours-cell">7</div>
+                        <div class="tours-cell">
+                            <div class="rating">
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item"></div>
+                            </div>
+                            <span class="rating-text">5/6</span>
+                        </div>
+                        <div class="tours-cell">
+                            <button class="book-btn">ЗАБРОНИРОВАТЬ</button>
+                        </div>
+                    </div>
+                    <div class="tours-row">
+                        <div class="tours-cell">ГОРНЫЙ ШТУРМ</div>
+                        <div class="tours-cell">АЛТАЙ</div>
+                        <div class="tours-cell">15 ИЮНЯ 2025</div>
+                        <div class="tours-cell">7</div>
+                        <div class="tours-cell">
+                            <div class="rating">
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item active"></div>
+                                <div class="rating-item"></div>
+                            </div>
+                            <span class="rating-text">5/6</span>
+                        </div>
+                        <div class="tours-cell">
+                            <button class="book-btn">ЗАБРОНИРОВАТЬ</button>
+                        </div>
+                    </div>
+                    <!-- Остальные строки по аналогии -->
+                </div>
+            </div>
+        </section>
+
+<section class="faq-section">
+    <div class="container">
+        <h2 class="faq-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+        
+        <div class="faq-list">
+            <!-- Вопрос 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какая физическая подготовка требуется? </span>
+                    <div class="faq-check">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Описание работы фронтального электронного аудиторинга и его преимуществ для туристов.</p>
+                </div>
+            </div>
+            
+            <!-- Вопрос 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Полное направление линии блок и устройств</span>
+                    <div class="faq-check">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Информация о том, как правильно ориентироваться по линиям блоков и устройств во время тура.</p>
+                </div>
+            </div>
+                        <div class="faq-item">
+                <div class="faq-question">
+                    <span>Полное направление линии блок и устройств</span>
+                    <div class="faq-check">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Информация о том, как правильно ориентироваться по линиям блоков и устройств во время тура.</p>
+                </div>
+            </div>
+                        <div class="faq-item">
+                <div class="faq-question">
+                    <span>Полное направление линии блок и устройств</span>
+                    <div class="faq-check">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Информация о том, как правильно ориентироваться по линиям блоков и устройств во время тура.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
-    
+    <script src="js/index.js"></script>
 </body>
 </html>

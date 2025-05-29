@@ -2,12 +2,13 @@ main
 {
     background-color: black;
     color: #A0F239;
+    overflow: hidden;
 }
 .main-header
 {
     display: flex;
     align-items: center;
-    
+    justify-content: center;
 }
 .main-header__title
 {
