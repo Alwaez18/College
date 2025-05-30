@@ -1,0 +1,64 @@
+.about-us
+{
+    margin-top: 130px;
+}
+.about-us__header__title
+{
+    color: white;
+    font-size: 96px;
+    display: flex;
+    flex-direction: column;
+
+}
+.about-us__header__title::after
+{
+    content: 'МЫ?';
+    color: #A0F239;
+}
+.about-us__info
+{
+    margin-top: 50px;
+    background-color: #1A1919;
+    width: 100%;
+    height: 335px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+.about-us__info__text
+{
+    margin-top: 40px;
+    font-size: 24px;
+    text-align: start;
+    width: 800px;
+    color: #D3D3D3;
+}
+.about-us__info__fio
+{
+    font-size: 40px;
+}
+.about-us__info__white
+{
+    margin-top: 30px;
+    font-size: 40px;
+}
+.about-us__info__green
+{
+    font-size: 40px;
+    color: #A0F239;
+}
+.about-us__info-flex
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us__photo-item
+{
+    position: relative;
+    bottom: 110px;
+    width: 654px;
+    height: 430px;
+}
