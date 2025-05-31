@@ -1,0 +1,49 @@
+.main-info
+{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 48px;
+    margin-top: 50px;
+}
+.main-info__left__turs::before
+{
+    content: '320214';
+    color: #A0F239;
+    font-size: 48px;
+}
+.main-info__left__turs::after
+{
+    content: 'ТУРОВ';
+    color: white;
+    font-size: 48px;
+}
+.main-info__left__turs
+{
+    display: flex;
+    flex-direction: column;
+}
+.main-info__right__text::before
+{
+    content: 'TEXT';
+    color: #A0F239;
+    font-size: 48px;
+}
+.main-info__right__text::after
+{
+    content: 'TEXT';
+    color: white;
+    font-size: 48px;
+}
+.main-info__right__text
+{
+    display: flex;
+    flex-direction: column;
+}
+.main-finish__line
+{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
