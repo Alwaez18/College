@@ -59,3 +59,72 @@
     color: black;
     border: black;
 }
+@media (max-width: 768px) {
+    .hero-section-info {
+        gap: 25px;
+    }
+    
+    .hero-section-info__title {
+        font-size: 72px;
+    }
+    
+    .hero-section-info__text {
+        font-size: 36px;
+    }
+    
+    .hero-section-info__button {
+        font-size: 32px;
+        padding: 15px 50px;
+    }
+}
+
+/* Десктоп (1025px и больше) */
+@media (min-width: 1025px) {
+    .hero-section-info__title {
+        font-size: 90px;
+    }
+    
+    .hero-section-info__text {
+        font-size: 40px;
+    }
+    
+    .hero-section-info__button {
+        font-size: 48px;
+        padding: 5px 34px;
+    }
+}
+
+/* Маленькие мобильные (до 360px) */
+@media (max-width: 360px) {
+    .hero-section-info__button {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+    
+    .hero-section-info {
+        gap: 10px;
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    
+    .hero-section-info__title {
+        font-size: 10vw;
+    }
+    
+    .hero-section-info__text {
+        font-size: 4vw;
+    }
+    
+    .hero-section-info__button {
+        font-size: 18px;
+        padding: 8px 25px;
+        margin-top: 10px;
+    }
+}

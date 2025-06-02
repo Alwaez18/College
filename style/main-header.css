@@ -25,3 +25,74 @@ main
     justify-content: end;
     gap: 19px;
 }
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 40px;
+    }
+    
+    .main-header__title {
+        font-size: 64px;
+        text-align: left;
+        order: 2;
+        flex: 1;
+    }
+    
+    .main-header-nav {
+        order: 1;
+        align-items: flex-start;
+        max-width: 300px;
+    }
+    
+    .main-header-nav__img {
+        max-width: 250px;
+    }
+}
+
+/* Десктоп (1025px и больше) */
+@media (min-width: 1025px) {
+    main {
+        padding: 40px 100px;
+    }
+    
+    .main-header__title {
+        font-size: 89px;
+    }
+    
+    .main-header-nav {
+        gap: 19px;
+    }
+    
+    .main-header-nav__img {
+        max-width: none;
+    }
+}
+
+/* Маленькие мобильные (до 360px) */
+@media (max-width: 360px) {
+    .main-header__title {
+        font-size: 36px;
+    }
+    
+    .main-header-nav {
+        gap: 10px;
+    }
+}
+
+/* Ландшафтный режим на мобильных */
+@media (max-width: 767px) and (orientation: landscape) {
+    .main-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .main-header__title {
+        font-size: 8vw;
+    }
+    
+    .main-header-nav {
+        max-width: 200px;
+    }
+}

@@ -1,64 +1,131 @@
-.about-us
-{
+.about-us {
     margin-top: 130px;
 }
-.about-us__header__title
-{
+
+.about-us__header__title {
     color: white;
     font-size: 96px;
     display: flex;
     flex-direction: column;
-
 }
-.about-us__header__title::after
-{
+
+.about-us__header__title::after {
     content: 'МЫ?';
     color: #A0F239;
 }
-.about-us__info
-{
+
+.about-us__info {
     margin-top: 50px;
     background-color: #1A1919;
     width: 100%;
-    height: 335px;
+    height: auto;
+    min-height: 335px;
     padding: 10px 40px;
     color: white;
     display: flex;
     flex-direction: column;
-
 }
-.about-us__info__text
-{
+
+.about-us__info__text {
     margin-top: 40px;
     font-size: 24px;
     text-align: start;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     color: #D3D3D3;
 }
-.about-us__info__fio
-{
+
+.about-us__info__fio {
     font-size: 40px;
 }
-.about-us__info__white
-{
+
+.about-us__info__white {
     margin-top: 30px;
     font-size: 40px;
 }
-.about-us__info__green
-{
+
+.about-us__info__green {
     font-size: 40px;
     color: #A0F239;
 }
-.about-us__info-flex
-{
+
+.about-us__info-flex {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.about-us__photo-item
-{
+.about-us__photo-item {
     position: relative;
     bottom: 110px;
     width: 654px;
     height: 430px;
+    max-width: 100%;
+}
+
+/* Адаптив для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+    .about-us__header__title {font-size: 72px;}
+    .about-us__info {padding: 10px 30px;}
+    
+    .about-us__info__text 
+    {
+        font-size: 20px;
+        max-width: 600px;
+    }
+    
+    .about-us__info__fio,
+    .about-us__info__white,
+    .about-us__info__green {font-size: 32px;}
+    
+    .about-us__photo-item 
+    {
+        width: 500px;
+        height: 330px;
+        bottom: 80px;
+    }
+}
+
+/* Адаптив для средних мобильных устройств (481px - 767px) */
+@media (max-width: 767px) {
+    .about-us {margin-top: 80px;}
+    .about-us__header__title {font-size: 48px;}
+    
+    .about-us__info 
+    {
+        padding: 10px 20px;
+        margin-top: 30px;
+    }
+    
+    .about-us__info__text 
+    {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .about-us__info__fio,
+    .about-us__info__white,
+    .about-us__info__green {font-size: 24px;}
+    
+    .about-us__info-flex {flex-direction: column;}
+    
+    .about-us__photo-item 
+    {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-top: 30px;
+        order: -1;
+    }
+}
+
+/* Адаптив для маленьких мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+    .about-us__header__title {font-size: 36px;}
+    .about-us__info {padding: 10px 15px;}
+    .about-us__info__text {font-size: 14px;}
+
+    .about-us__info__fio,
+    .about-us__info__white,
+    .about-us__info__green {font-size: 20px;}
 }

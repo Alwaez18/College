@@ -100,28 +100,58 @@
 }
 
 @media (max-width: 768px) {
-    .tours-title {font-size: 36px;}
-    .tours-cell {flex: 1 0 50%;}
-    .tours-header .tours-cell {display: none; }
-    .tours-row 
-    {
-        position: relative;
-        padding-top: 40px;
+    .tours-title { font-size: 36px; }
+    
+    .tours-table {
+        border: none;
     }
     
-    .tours-cell::before 
-    {
+    .tours-row {
+        flex-wrap: wrap;
+        border: 1px solid #A0F239;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    .tours-header {
+        flex: 1 0 100%;
+        border-bottom: 1px solid #A0F239;
+    }
+    
+    .tours-header .tours-cell {
+        flex: 1;
+        padding: 15px 10px;
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .tours-cell {
+        flex: 1 0 100%;
+        padding: 15px;
+        justify-content: space-between;
+    }
+    
+    .tours-cell::before {
         content: attr(data-label);
-        position: absolute;
-        left: 10px;
         font-weight: bold;
         color: #A0F239;
+        margin-right: 10px;
     }
     
-    .tours-cell {justify-content: flex-end;}
+    .book-btn {
+        width: auto;
+    }
 }
 
 @media (max-width: 480px) {
-    .tours-cell {flex: 1 0 100%;}
-    .book-btn{width: 100%;}
+    .tours-header .tours-cell {
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    
+    .tours-cell {
+        padding: 10px;
+        font-size: 14px;
+    }
 }

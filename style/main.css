@@ -66,6 +66,10 @@
     gap: 40px;
     height: auto;
 }
+.card-block-1__img
+{
+    width: 100%;
+}
 .grid-item--green
 {
     width: 40px;

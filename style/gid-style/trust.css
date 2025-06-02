@@ -1,126 +1,191 @@
-.trust-us
-{
-    padding: 0 100PX;
+/* Trust Us Section */
+.trust-us {
+    padding: 0 20px;
+    box-sizing: border-box;
 }
-.trust-us-info__title
-{
+
+.trust-us-info__title {
     color: white;
-    font-size: 96px;
-    margin-top: 50px;
-    text-align: center;
-}
-.trust-us-block
-{
-    margin-top: 40px;
-    width: 100%;
-    height: 287px;
-    border: 2px solid #A0F239;
-    background-image: url(/img/Rectangle\ 163.png);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.trust-us-block-BMW
-{
-    margin-top: 40px;
-    width: 100%;
-    height: 287px;
-    border: 2px solid #A0F239;
-    background-image: url(/img/Rectangle\ 164.png);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.trust-us-block-AIR
-{
-    margin-top: 40px;
-    width: 100%;
-    height: 287px;
-    border: 2px solid #A0F239;
-    background-image: url(/img/Rectangle\ 165.png);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-.trust-us-block__title
-{
     font-size: 48px;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.trust-us-block,
+.trust-us-block-BMW,
+.trust-us-block-AIR {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+    border: 2px solid #A0F239;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.trust-us-block__title {
+    font-size: 28px;
     color: white;
     font-weight: 700;
-    padding: 10px 20PX;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.footer 
-{
-  background-color: #000;
-  color: #fff;
-  padding: 30px 20px 10px;
-  font-size: 24px;
-  text-align: center;
+/* Footer Section */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.footer-inner 
-{
-  max-width: 1000px;
-  margin: 0 auto;
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.footer a 
-{
-  color: #fff;
-  text-decoration: none;
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.footer a:hover {text-decoration: underline;}
-
-.socials 
-{
-  margin-top: 15px;
+.footer a:hover {
+    color: #A0F239;
 }
 
-.socials a 
-{
-  display: inline-flex;
-  align-items: center;
-  margin-right: 15px;
-  font-weight: bold;
+.socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.socials img 
-{
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
-  vertical-align: middle;
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
 }
 
-.footer p 
-{
-  margin: 10px 0;
-  line-height: 1.5;
+.socials img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 
-.footer strong 
-{
-  color: #A0F239;
-  text-transform: uppercase;
+.footer p {
+    margin: 15px 0;
+    line-height: 1.5;
 }
 
-.footer .copyright 
-{
-  margin-top: 20px;
-  font-size: 12px;
+.footer strong {
+    color: #A0F239;
+    text-transform: uppercase;
 }
-.footer-razdelenie
-{
-    margin-top: 60px;
-    height: 3px;
+
+.footer .copyright {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.footer-razdelenie {
+    margin-top: 40px;
+    height: 2px;
     background-color: #A0F239;
     width: 100%;
+    border: none;
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) {
+    .trust-us {
+        padding: 0 60px;
+    }
+    
+    .trust-us-info__title {
+        font-size: 72px;
+        margin-top: 50px;
+    }
+    
+    .trust-us-block,
+    .trust-us-block-BMW,
+    .trust-us-block-AIR {
+        height: 250px;
+    }
+    
+    .trust-us-block__title {
+        font-size: 36px;
+        padding: 20px;
+    }
+    
+    .footer {
+        padding: 40px 60px;
+        font-size: 20px;
+    }
+}
+
+/* Desktop (1025px and up) */
+@media (min-width: 1025px) {
+    .trust-us {
+        padding: 0 100px;
+    }
+    
+    .trust-us-info__title {
+        font-size: 96px;
+        margin-top: 60px;
+    }
+    
+    .trust-us-block,
+    .trust-us-block-BMW,
+    .trust-us-block-AIR {
+        height: 287px;
+    }
+    
+    .trust-us-block__title {
+        font-size: 48px;
+        padding: 10px 20px;
+    }
+    
+    .footer {
+        padding: 50px 100px;
+        font-size: 24px;
+    }
+    
+    .socials {
+        gap: 25px;
+    }
+}
+
+/* Small Mobile (up to 360px) */
+@media (max-width: 360px) {
+    .trust-us-info__title {
+        font-size: 36px;
+    }
+    
+    .trust-us-block,
+    .trust-us-block-BMW,
+    .trust-us-block-AIR {
+        height: 180px;
+    }
+    
+    .trust-us-block__title {
+        font-size: 24px;
+    }
+    
+    .footer {
+        padding: 25px 15px;
+        font-size: 16px;
+    }
+    
+    .socials {
+        flex-direction: column;
+        align-items: center;
+    }
 }

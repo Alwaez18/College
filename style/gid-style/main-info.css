@@ -1,49 +1,131 @@
-.main-info
-{
+.main-info {
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     font-size: 48px;
     margin-top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
-.main-info__left__turs::before
-{
+
+.main-info__left,
+.main-info__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-info__left__turs::before {
     content: '320214';
     color: #A0F239;
-    font-size: 48px;
+    font-size: 1em;
+    line-height: 1;
 }
-.main-info__left__turs::after
-{
+
+.main-info__left__turs::after {
     content: 'ТУРОВ';
     color: white;
-    font-size: 48px;
+    font-size: 1em;
+    line-height: 1;
+    margin-top: 5px;
 }
-.main-info__left__turs
-{
+
+.main-info__left__turs {
     display: flex;
     flex-direction: column;
 }
-.main-info__right__text::before
-{
+
+.main-info__right__text::before {
     content: 'TEXT';
     color: #A0F239;
-    font-size: 48px;
+    font-size: 1em;
+    line-height: 1;
 }
-.main-info__right__text::after
-{
+
+.main-info__right__text::after {
     content: 'TEXT';
     color: white;
-    font-size: 48px;
+    font-size: 1em;
+    line-height: 1;
+    margin-top: 5px;
 }
-.main-info__right__text
-{
+
+.main-info__right__text {
     display: flex;
     flex-direction: column;
+    text-align: right;
 }
-.main-finish__line
+
+
+.main-finish__line__img
 {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+}
+
+/* Адаптив для ноутбуков (1025px - 1440px) */
+@media (max-width: 1440px) {
+    .main-info {
+        font-size: 42px;
+    }
+}
+
+/* Адаптив для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+    .main-info {
+        font-size: 36px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .main-info__right__text {
+        text-align: left;
+    }
+    
+    .main-finish__line {
+        margin-top: 50px;
+    }
+}
+
+/* Адаптив для средних мобильных (481px - 767px) */
+@media (max-width: 767px) {
+    .main-info {
+        font-size: 28px;
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-info__left,
+    .main-info__right {
+        width: 100%;
+    }
+    
+    .main-info__right__text {
+        text-align: left;
+    }
+    
+    .main-finish__line {
+        margin-top: 40px;
+    }
+}
+
+/* Адаптив для маленьких мобильных (до 480px) */
+@media (max-width: 480px) {
+    .main-info {
+        font-size: 24px;
+        margin-top: 25px;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .main-info__left__turs::after,
+    .main-info__right__text::after {
+        margin-top: 3px;
+    }
+    
+    .main-finish__line {
+        margin-top: 30px;
+    }
 }
