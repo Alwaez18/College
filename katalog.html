@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/katalog.css/katalog.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/katalog.css/nav.css">
     
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header">
-                <h1 class="header__title">RAVAGE EXTRIME</h1>
+                <a href="index.html"><h1 class="header__title">RAVAGE EXTREME</h1></a>
                 <nav class="header__nav">
                     <a href="index.html" class="header__nav-links">ГЛАВНАЯ</a>
                     <a href="katalog.html" class="header__nav-links">КАТАЛОГ</a>
@@ -28,8 +29,20 @@
             <div class="katalog-section-info">
                 <h1 class="katalog-section-info__title">ПОЛНЫЙ СПИСОК ТУРОВ</h1>
             </div>
+
+            <!-- Меню фильтрации по сложности -->
+                <div class="difficulty-filter">
+                    <div class="difficulty-filter__title">Фильтр по сложности:</div>
+                    <div class="difficulty-filter__options">
+                        <button class="difficulty-filter__btn active" data-difficulty="all">Все</button>
+                        <button class="difficulty-filter__btn" data-difficulty="low">Низкая</button>
+                        <button class="difficulty-filter__btn" data-difficulty="medium">Средняя</button>
+                        <button class="difficulty-filter__btn" data-difficulty="high">Высокая</button>
+                        <button class="difficulty-filter__btn" data-difficulty="expert">Эксперт</button>
+                    </div>
+                </div>
             <article class="katalog-section-panel">
-                 <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 120.png')">
+                 <div class="katalog-section-panel__block" style="background-image:url('/img/Горный\ вызов.webp')"; data-difficulty="high">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Экстремальный тур "Горный вызов"</h6>
@@ -107,7 +120,7 @@
                     </div>
                  </div>
                  
-                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 123.png')">
+                <div class="katalog-section-panel__block" style="background-image: url('/img/сплавы.jpg')" data-difficulty="medium">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Сплавы по бурным рекам</h6>
@@ -186,7 +199,7 @@
                  </div>
                  
                 <!-- Прыжки с парашютом -->
-                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 121.png')">
+                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 121.png')" data-difficulty="low">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Прыжки с парашютом</h6>
@@ -270,7 +283,7 @@
                 </div>
                 
                 <!-- Скалолазание в Альпах -->
-                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 124.png')">
+                <div class="katalog-section-panel__block" style="background-image: url('/img/Альпы.jpg')" data-difficulty="expert">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Скалолазание в Альпах</h6>
@@ -343,7 +356,7 @@
                 </div>
                 
                 <!-- Дайвинг с акулами -->
-                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 122.png')">
+                <div class="katalog-section-panel__block" style="background-image: url('/img/дайвинг.jfif')"data-difficulty="medium">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Дайвинг с акулами</h6>
@@ -417,7 +430,7 @@
                 </div>
                 
                 <!-- Пустынное сафари -->
-                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 125.png')">
+                <div class="katalog-section-panel__block" style="background-image: url('/img/Rectangle\ 125.png')"data-difficulty="low">
                     <button class="close-btn" style="display: none;"><i class="fas fa-times"></i></button>
                     <div class="katalog-section-panel__block-content">
                         <h6 class="katalog-section-panel__block__item-title">Пустынное сафари</h6>
@@ -599,6 +612,27 @@
             });
         });
     });
+    // Фильтрация по сложности
+        const filterButtons = document.querySelectorAll('.difficulty-filter__btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Удаляем активный класс у всех кнопок
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Добавляем активный класс текущей кнопке
+                this.classList.add('active');
+
+                const difficulty = this.dataset.difficulty;
+                const tourBlocks = document.querySelectorAll('.katalog-section-panel__block');
+
+                tourBlocks.forEach(block => {
+                    if (difficulty === 'all' || block.dataset.difficulty === difficulty) {
+                        block.style.display = 'block';
+                    } else {
+                        block.style.display = 'none';
+                    }
+                });
+            });
+        });
 </script>
 </body>
 </html>

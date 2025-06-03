@@ -1,0 +1,119 @@
+/* Стили для фильтра сложности */
+.difficulty-filter 
+{
+    margin: 10px 0;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.difficulty-filter__title 
+{
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.difficulty-filter__options 
+{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.difficulty-filter__btn 
+{
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    background: #f8f8f8;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 24px;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Цвета для разных уровней сложности */
+.difficulty-filter__btn[data-difficulty="all"] 
+{
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+.difficulty-filter__btn[data-difficulty="low"] 
+{
+    background: #e3f2fd;
+    border-color: #bbdefb;
+    color: #1976d2;
+}
+.difficulty-filter__btn[data-difficulty="medium"] 
+{
+    background: #e8f5e9;
+    border-color: #c8e6c9;
+    color: #388e3c;
+}
+.difficulty-filter__btn[data-difficulty="high"] 
+{
+    background: #fff3e0;
+    border-color: #ffe0b2;
+    color: #f57c00;
+}
+.difficulty-filter__btn[data-difficulty="expert"] 
+{
+    background: #ffebee;
+    border-color: #ffcdd2;
+    color: #d32f2f;
+}
+
+/* Стили для hover */
+.difficulty-filter__btn[data-difficulty="all"]:hover {background: #e0e0e0;}
+.difficulty-filter__btn[data-difficulty="low"]:hover {background: #bbdefb;}
+.difficulty-filter__btn[data-difficulty="medium"]:hover {background: #c8e6c9;}
+.difficulty-filter__btn[data-difficulty="high"]:hover {background: #ffe0b2;}
+.difficulty-filter__btn[data-difficulty="expert"]:hover {background: #ffcdd2;}
+
+/* Стили для активного состояния */
+.difficulty-filter__btn.active[data-difficulty="all"] 
+{
+    background: #333;
+    color: white;
+    border-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.difficulty-filter__btn.active[data-difficulty="low"] 
+{
+    background: #1976d2;
+    color: white;
+    border-color: #1976d2;
+}
+.difficulty-filter__btn.active[data-difficulty="medium"] 
+{
+    background: #388e3c;
+    color: white;
+    border-color: #388e3c;
+}
+.difficulty-filter__btn.active[data-difficulty="high"] 
+{
+    background: #f57c00;
+    color: white;
+    border-color: #f57c00;
+}
+.difficulty-filter__btn.active[data-difficulty="expert"] 
+{
+    background: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+}
+
+/* Эффект при нажатии */
+.difficulty-filter__btn:active 
+{
+    transform: translateY(2px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
